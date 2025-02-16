@@ -16,6 +16,7 @@ func main() {
 
 	// Регистрация обработчиков
 	r.HandleFunc("/", handlers.HomeHandler).Methods("GET")
+	r.HandleFunc("/about", handlers.AboutHandler).Methods("GET")
 
 	// Статические файлы
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("web/static"))))
