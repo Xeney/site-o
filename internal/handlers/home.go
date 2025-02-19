@@ -8,11 +8,5 @@ import (
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("web/templates/home.html"))
 
-	data := struct {
-		Title string
-	}{
-		Title: "Добро пожаловать!",
-	}
-
-	tmpl.ExecuteTemplate(w, "home.html", data)
+	tmpl.ExecuteTemplate(w, "home.html", nil)
 }
