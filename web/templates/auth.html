@@ -1,0 +1,15 @@
+{{ template "header" . }}
+
+<main class="main center">
+    <form class="form-login" method="post">
+        <h2 class="title">Вход в систему</h2>
+        <div class="inputs">
+            <input autocomplete="off" type="text" minlength="3" maxlength="20" name="login" placeholder="Логин" required>
+            <input autocomplete="off" type="password" minlength="8" name="password" placeholder="Пароль" required>
+        </div>
+        <button class="but-login" type="submit">Войти</button>
+        <a href="/reg">У меня нет аккаунта</a>
+    </form>
+</main>
+
+{{ template "footer" . }}

@@ -1,0 +1,33 @@
+{{ define "header" }}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+     <link rel="stylesheet" href="../static/css/style.css">
+    <title>GameApp | мини-игры</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1 class="logo"><a href="/">GameApp</a></h1>
+            <nav class="menu">
+                {{ if .isAuth }}
+                    <a href="/profile">Профиль</a>
+                    <a href="#">Игры</a>
+                    <a href="#">Друзья</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Поддержка</a>
+                    <a class="login" href="/logout">Выйти</a>
+                {{ else }}
+                    <a href="/">Главная</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Поддержка</a>
+                    <a class="login" href="/login">Войти</a>
+                {{ end }}
+            </nav>
+        </header>
+
+{{ end }}

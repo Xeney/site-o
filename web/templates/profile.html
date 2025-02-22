@@ -1,0 +1,44 @@
+{{ template "header" . }}
+
+<main class="main">
+    <div class="info-list">
+        <div class="block">
+            <h3>Логин</h3>
+            <p>{{ .user.Login }}</p>
+        </div>
+        <div class="block">
+            <h3>Email</h3>
+            <p>{{ .user.Email }}</p>
+        </div>
+        <div class="block">
+            <h3>Количество сыгранных игр</h3>
+            <p>{{ .user.CountGames }}</p>
+        </div>
+        <div class="block">
+            <h3>Побед</h3>
+            <p>{{ .user.CountVictory }}</p>
+        </div>
+        <div class="block">
+            <h3>Поражений</h3>
+            <p>{{ .user.CountDefeat }}</p>
+        </div>
+        <div class="block">
+            <h3>Баллы</h3>
+            <p>{{ .user.Points }}</p>
+        </div>
+        <div class="block">
+            <h3>Дата регистрации</h3>
+            <p>{{ .user.CreatedAt }}</p>
+        </div>
+        <div class="block">
+            <h3>Дата последней активности</h3>
+            <p>{{ .user.LastActive }}</p>
+        </div>
+        <div class="block">
+            <h3>Роль пользователя</h3>
+            <p>{{ .user.Role }}</p>
+        </div>
+    </div>
+</main>
+
+{{ template "footer" . }}
